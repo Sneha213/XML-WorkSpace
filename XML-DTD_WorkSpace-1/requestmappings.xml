@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE request-mappings SYSTEM "requestmappings.dtd">
+<request-mappings>
+	<!-- ========== MLA_Web Request Mapping Definitions ============================== -->
+	<!-- ========== Index Request Mapping Definition ============================== -->
+	<url-mapping url="/index" currentpage="index.jsp">
+		<request-handler class="com/affirmicom/requesthandler/IndexRequestHandler">
+			<command-mapping command="getHome" targetpage="/MLAHome.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/home_action" currentpage="MLAHome.jsp">
+		<request-handler class="com/affirmicom/requesthandler/HomePageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/bio_action" currentpage="MLABiography.jsp">
+		<request-handler class="com/affirmicom/requesthandler/BiographyPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/constit_action" currentpage="MLAConstituency.jsp">
+		<request-handler class="com/affirmicom/requesthandler/ConstituencyPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/news_action" currentpage="MLANews.jsp">
+		<request-handler class="com/affirmicom/requesthandler/NewsPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/issues_action" currentpage="MLAIssues.jsp">
+		<request-handler class="com/affirmicom/requesthandler/IssuesPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+			<command-mapping command="doMail" targetpage="/MLAIssues.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/links_action" currentpage="MLALinks.jsp">
+		<request-handler class="com/affirmicom/requesthandler/LinksPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/pic_action" currentpage="MLAPictures.jsp">
+		<request-handler class="com/affirmicom/requesthandler/PhotoPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+	<url-mapping url="/faq_action" currentpage="MLAFAQs.jsp">
+		<request-handler class="com/affirmicom/requesthandler/FAQPageRequestHandler">
+			<command-mapping command="getHomePage" targetpage="/MLAHome.jsp"/>
+			<command-mapping command="getBioPage" targetpage="/MLABiography.jsp"/>
+			<command-mapping command="getConstitPage" targetpage="/MLAConstituency.jsp"/>
+			<command-mapping command="getNewsPage" targetpage="/MLANews.jsp"/>
+			<command-mapping command="getIssuesPage" targetpage="/MLAIssues.jsp"/>
+			<command-mapping command="getLinksPage" targetpage="/MLALinks.jsp"/>
+			<command-mapping command="getPicPage" targetpage="/MLAPictures.jsp"/>
+			<command-mapping command="getFAQPage" targetpage="/MLAFAQs.jsp"/>
+		</request-handler>
+	</url-mapping>
+</request-mappings>

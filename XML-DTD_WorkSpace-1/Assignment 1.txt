@@ -1,0 +1,23 @@
+Write a DTD for the requestMappings.xml file.
+
+- Ensure it properly validates the xml file.
+
+- It must have a comment (you lose a mark if you don't have a comment).
+
+Ensure:
+
+- there can be one and only 1 request-mappings element
+
+- there must be one to many url-mapping elements
+
+- the url-mapping element must have both 'url' and 'currentpage' attributes
+
+- the url-mapping element must have a request-handler child element (only 1)
+
+- the request-handler element must have a 'class' attribute
+
+- the request-handler element must have command-mapping elements
+
+- the command-mapping element must have 'command' attribute.
+
+- the 'target-page' attribute is optional.

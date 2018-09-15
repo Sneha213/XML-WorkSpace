@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Sneha Patel(000783907) - Assignment_1 - XML-DTD 
+     Assignment Title : Write a DTD for the requestMappings.xml file.
+                        Ensure it properly validates the xml file.-->
+     
+<!-- one and only 1 request-mappings element and 
+one to many url-mapping elements with 2 attributes i.e. url,currentpage -->
+<!ELEMENT request-mappings (url-mapping+) > 
+<!ATTLIST url-mapping url CDATA #REQUIRED
+                      currentpage CDATA #REQUIRED>
+                      
+ <!-- url-mapping element with only 1 request-handler child element 
+and it's attribute i.e. class  -->                                                                 
+<!ELEMENT url-mapping (request-handler) >
+<!ATTLIST request-handler class CDATA #REQUIRED>
+
+<!--request-handler element with one or one to many command-mapping elements
+ and command-mapping element with 2 attributes command-mapping,targetpage -->
+<!ELEMENT request-handler (command-mapping+) >
+<!ATTLIST command-mapping command (getHome|getHomePage|getBioPage|getConstitPage|getNewsPage|
+                                   getIssuesPage|getLinksPage|getPicPage|getFAQPage|doMail) #IMPLIED
+                                   
+                          targetpage CDATA #REQUIRED>
+                          
+<!ELEMENT command-mapping (#PCDATA)>
+
+
+
+

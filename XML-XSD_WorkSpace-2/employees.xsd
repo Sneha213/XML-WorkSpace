@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--employees.xsd file
+  Author: Sneha Patel(000783907)
+  Title of Assignment: Correct the attached xsd for the accompanied employees.xml file.  
+                       The xsd must be well formed, formatted nicely, have comments, have an annotation, and properly validate the employees.xml file.  
+                       Business rules must followed while creating the xsd file. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<!-- Annotations/Documention are machine readable comments.  They are used quite
+			a bit for documentation for users (particularly in web service/rest APIs -->
+	<xs:annotation>
+		<xs:documentation>Comment describing your root element</xs:documentation>
+	</xs:annotation>
+	<!-- one and only one employees element as complex-type-->
+	<xs:element name="employees">
+		<xs:complexType>
+			<xs:sequence>
+				<!---	employees element with one and more than one employee elements as complex-type-->
+				<xs:element name="employee" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!---	employee element has one and only one expertise element -->
+							<xs:element name="expertise" type="xs:string" maxOccurs="1"/>
+							<!--employee element has one to many consultedClient child elements-->
+							<xs:element name="consultedClient" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="durationInMonths" type="xs:positiveInteger" use="optional"/>
+									<xs:attribute name="position" use="required">
+										<!--Positive element has enumerations-->
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="teamLead"/>
+												<xs:enumeration value="manager"/>
+												<xs:enumeration value="programmer"/>
+												<xs:enumeration value="analyst"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<!--- DurationInMonths has a positive integer type and is optional -->
+									<!--Position is required element-->
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						
+						<!---	employee element that have name, sinNumber and sex attributes and 
+                        it's all are required except for birthdate-->
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="birthdate" type="xs:string" use="optional"/>
+						<xs:attribute name="sinNumber" type="xs:string" use="required"/>
+						<xs:attribute name="sex" use="required">
+							<!--sex element has enumerations-->
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="male"/>
+									<xs:enumeration value="female"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>						
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
